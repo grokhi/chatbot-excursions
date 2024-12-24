@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "chatbot-excursions"
+version = "0.1.0"
+description = ""
+authors = ["Ars Vladimirov <grokhael@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.115.5"
+langgraph = "^0.2.53"
+gradio = "^5.7.1" 
+websockets = ">=10.0,<13.0"
+protobuf = ">=3.20.2,<5.29.0" 
+uvicorn = "^0.32.1"
+loguru = "^0.7.2"
+pydantic = "^2.10.1"
+pydantic-settings = "^2.6.1"
+langchain = "^0.3.7"
+chromadb = "^0.5.20"
+langchain-openai = "^0.2.9"
+openai = "^1.55.1"
+langchain-groq = "^0.2.1"
+langchain-google-genai = "^2.0.6"
+langchain-chroma = "^0.1.4"
+langchain-community = "^0.3.8"
+duckduckgo-search = "^6.3.7"
+langchain-ollama = "^0.2.1"
+ollama = "0.4.2"
+langgraph-checkpoint-sqlite = "^2.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
