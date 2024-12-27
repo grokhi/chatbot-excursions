@@ -30,6 +30,7 @@ langchain-ollama = "^0.2.1"
 ollama = "0.4.2"
 langgraph-checkpoint-sqlite = "^2.0.1"
 beautifulsoup4 = "^4.12.3"
+onnxruntime = "^1.14.1"
 
 
 [tool.poetry.group.dev.dependencies]

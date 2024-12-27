@@ -31,7 +31,7 @@ This project implements a chatbot using a Retrieval-Augmented Generation (RAG) f
    Use Docker to build and run the services:
 
    ```bash
-   docker-compose up
+   docker-compose up -d
    ```
 
    **Note:** The first startup will pull and initialize the LLAMA model, which may take some time.
