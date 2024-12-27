@@ -3,13 +3,13 @@ from typing import Annotated, Literal, Sequence
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, ToolMessage
 from langchain_core.prompts import PromptTemplate
 from langchain_groq import ChatGroq
-from langgraph.graph import MessagesState
+from langgraph.graph import END, MessagesState
 from pydantic import BaseModel, Field
 from src.core.logger import logger
 from src.handlers.llm import LLMHandler
 
 
-def grade_documents(state: MessagesState) -> Literal["generate", "web_search"]:
+def grade_documents(state: MessagesState) -> Literal["generate", "rewrite"]:
     """
     Determines whether the retrieved documents are relevant to the question.
 
@@ -74,4 +74,5 @@ def grade_documents(state: MessagesState) -> Literal["generate", "web_search"]:
 
     else:
         logger.info("DECISION: DOCS NOT RELEVANT")
-        return "web_search"
+        # return "web_search"
+        return "rewrite"

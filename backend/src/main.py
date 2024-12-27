@@ -19,7 +19,7 @@ graph = create_graph()
 
 # Pydantic models for request/response validation
 class QueryRequest(BaseModel):
-    query: str = Field(default="What is the weather in sf?")
+    query: str = Field(default="What are the prices for child excursions to Krabi?")
     # session_id: str
 
 

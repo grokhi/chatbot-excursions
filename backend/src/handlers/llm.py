@@ -16,14 +16,19 @@ class LLMHandler:
 
         if run_local:
             self.llm = ChatOllama(
-                model=config.LLAMA_MODEL,
+                model=config.LOCAL_MODEL,
                 temperature=0,
                 streaming=True,
                 base_url=config.LOCAL_LLM_HOST,
             )
         else:
-            self.llm = ChatOpenAI(
-                model=config.OPENAI_MODEL,
+            self.llm = ChatGroq(
+                model=config.API_MODEL,
                 temperature=0,
                 streaming=True,
             )
+            # self.llm = ChatOpenAI(
+            #     model=config.OPENAI_MODEL,
+            #     temperature=0,
+            #     streaming=True,
+            # )

@@ -11,15 +11,15 @@ class Settings(BaseSettings):
     LOCAL_LLM_HOST: str = "localhost"
     LOCAL_LLM_PORT: int = 11434
 
-    LLAMA_MODEL: str = "llama3.1:8b"
-    OPENAI_MODEL: str = "gpt-3.5-turbo"
+    LOCAL_MODEL: str = "llama3.1:8b"
+    API_MODEL: str
 
     OPENAI_API_KEY: Optional[str] = None
     GROQ_API_KEY: Optional[str] = None
     GOOGLE_API_KEY: Optional[str] = None
     TAVILY_API_KEY: Optional[str] = None
 
-    LANGCHAIN_DEBUG: bool = False
+    LANGCHAIN_DEBUG: bool = True
 
     DATA_DIR: str = "./data/"
 
