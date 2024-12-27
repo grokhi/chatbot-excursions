@@ -34,7 +34,7 @@ def generate(state: MessagesState):
                 (
                     "You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. "
                     "If you don't know the answer, just say that you don't know. Do not mention that you have used the provided context. "
-                    "Use three sentences maximum and keep the answer concise.\n"
+                    "Use three sentences maximum and keep the answer concise. Be confident and certain.\n"
                     "Question: {question}"
                     "\nContext: {context} "
                     "\nAnswer:"

@@ -1,8 +1,8 @@
-# Chatbot with RAG and Web Search
+# Phuket excursions chatbot with RAG
 
 ## Overview
 
-This project implements a chatbot using a Retrieval-Augmented Generation (RAG) framework powered by LangGraph. The chatbot can retrieve information from a knowledge graph based on the [RuBQ 2.0 dataset](https://github.com/vladislavneon/RuBQ) and perform web-based queries.
+This project implements a chatbot using a Retrieval-Augmented Generation (RAG) framework powered by LangGraph. The chatbot can retrieve information from a knowledge graph based on the [Phuket excursions](https://phuket-cheap-tour.com/catalog) and perform vectorbase queries.
 
 <div align="center"> 
    <img src="graph.png" alt="Graph"> 
@@ -11,8 +11,8 @@ This project implements a chatbot using a Retrieval-Augmented Generation (RAG) f
 
 ## Features
 
-- **RUBQ Knowledge Graph Retrieval:** Answer questions based on the RuBQ dataset.
-- **Web Search Integration:** Query real-time web-based data using the Tavily search engine.
+<!-- - **RUBQ Knowledge Graph Retrieval:** Answer questions based on the RuBQ dataset.
+- **Web Search Integration:** Query real-time web-based data using the Tavily search engine. -->
 - **Context Memory:** Handle follow-up questions by maintaining conversational context.
 - **Local LLM Support:** Use a local large language model (LLAMA) for response generation.
 - **Gradio Session Versatility**: Open multiple Gradio chatbots in different tabs to maintain distinct conversation threads with memory.
@@ -22,8 +22,8 @@ This project implements a chatbot using a Retrieval-Augmented Generation (RAG) f
 1. **Clone the Repository**
 
    ```bash
-   git clone git@github.com:grokhi/chatbot-rag.git
-   cd chatbot-rag
+   git clone git@github.com:grokhi/chatbot-excursions.git
+   cd chatbot-excursions
    ```
 
 2. **Start the Application**
@@ -50,26 +50,20 @@ This project implements a chatbot using a Retrieval-Augmented Generation (RAG) f
 
 Here are some examples to test the chatbot's retrieval and context capabilities:
 
-### Knowledge Graph Retrieval (RuBQ)
+### Knowledge Graph Retrieval
 
 ```text
-> Какая столица у Туркмении?  # Checks RuBQ retrieval
-> А у Удмуртии?              # Tests context memory for follow-up questions
+> What are the prices for child excursions to Krabi?  # Checks knowledge base retrieval
+> What about adults?              # Tests context memory for follow-up questions
 ```
 
-### Web Search Queries
+<!-- ### Web Search Queries -->
+### Irrelevant queries
 
 ```text
-> What is the weather in SF?  # Checks web search functionality
-> What about NY?              # Tests context memory for follow-up questions
+> What is the weather in SF?  # expecting agent to quit with answer ""
 ```
 
-### Mixed query
-
-```text
-> Какая столица у Туркмении?  # Столицей Туркмении является Ашхабад
-> What about NY?              # The capital of New York State is Albany.
-```
 
 ## Notes and Known Limitations
 
@@ -78,9 +72,9 @@ Here are some examples to test the chatbot's retrieval and context capabilities:
   - Face challenges with keyword retrieval for graph operations.
   - Occasionally freeze during intensive GPU operations.
 
-- **Web Search Engine:**
+<!-- - **Web Search Engine:**
   - The Tavily search engine is used instead of DuckDuckGo due to stability issues with the latter.
-  - Ensure the `.env` file includes a valid `TAVILY_API_KEY`.
+  - Ensure the `.env` file includes a valid `TAVILY_API_KEY`. -->
 
 - **First-Time Model Initialization:** 
   - The initial setup involves downloading and initializing the LLAMA model, which may take additional time based on network speed and hardware capabilities.

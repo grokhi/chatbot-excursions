@@ -31,7 +31,7 @@ def rewrite(state: MessagesState):
                 Look at the input and try to reason about the underlying semantic intent / meaning. \n 
                 Here is the initial question:
                 \n ------- \n
-                {question} 
+                {question}
                 \n ------- \n
                 Formulate an improved question. Do not mention your reasoning. Be lapidary as possible.""",
         )
